@@ -114,7 +114,7 @@ class _HomePageState extends State<HomePage> {
     Widget credits = Container(
       margin: EdgeInsets.fromLTRB(0, 20, 0, 0),
       child: Text(
-        "Made with ❤️ by Yerassyl from 9D",
+        "Made with ❤️ by EraOfCoding",
         style: Theme.of(context).textTheme.headline5,
       ),
     );

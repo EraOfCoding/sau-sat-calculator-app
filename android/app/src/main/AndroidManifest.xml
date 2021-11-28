@@ -1,7 +1,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.sau_sat_calculator_app">
    <application
-        android:label="sau_sat_calculator_app"
+        android:label="SSCalc"
         android:icon="@mipmap/ic_launcher">
         <activity
             android:name=".MainActivity"
