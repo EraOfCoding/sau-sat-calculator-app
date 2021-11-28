@@ -1,4 +1,3 @@
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:numberpicker/numberpicker.dart';
 
@@ -100,19 +99,27 @@ class _HomePageState extends State<HomePage> {
                           : (((_sauResult3 + satResult) / 2 * 10000).round() /
                                   100)
                               .toString()) +
-                  '% is your Result'
+                  '% is your result'
               : (_sauNum == 1
                       ? ((_sauResult1 * 10000).round() / 100).toString()
                       : _sauNum == 2
                           ? ((_sauResult2 * 10000).round() / 100).toString()
                           : ((_sauResult3 * 10000).round() / 100).toString()) +
-                  '% is your Result',
+                  '% is your result',
           style: Theme.of(context).textTheme.headline4,
         ),
       ),
     );
 
-    //_________________________ sorry for very bad construction :/
+    Widget credits = Container(
+      margin: EdgeInsets.fromLTRB(0, 20, 0, 0),
+      child: Text(
+        "Made with ❤️ by Yerassyl from 9D",
+        style: Theme.of(context).textTheme.headline5,
+      ),
+    );
+
+    //_________________________ sorry for bad construction :/
     Widget _sauScore1 = Container(
       margin: EdgeInsets.fromLTRB(0, 20, 0, 20),
       decoration: fieldDecoration(),
@@ -297,6 +304,7 @@ class _HomePageState extends State<HomePage> {
         ),
         backgroundColor: Colors.grey[900],
         elevation: 0.0,
+        brightness: Brightness.dark,
       ),
       body: SingleChildScrollView(
         child: Container(
@@ -314,6 +322,7 @@ class _HomePageState extends State<HomePage> {
               passedSat,
               _passedSAT ? _satScore : SizedBox(height: 0),
               result,
+              credits,
             ],
           ),
         ),
@@ -330,7 +339,7 @@ class _HomePageState extends State<HomePage> {
           color: Colors.black45.withOpacity(0.2),
           spreadRadius: 1,
           blurRadius: 3,
-          offset: Offset(0, 2.5),
+          offset: Offset(0, 2),
         ),
       ],
     );
